@@ -22,6 +22,8 @@ ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
 
 ## Extract frames of a video at a certain time frame
 
+[link](https://superuser.com/questions/1389019/ffmpeg-how-to-extract-frames-of-a-video-at-a-certain-time-frame?noredirect=1&lq=1)
+
 Use -ss and -to.
 
 ```
