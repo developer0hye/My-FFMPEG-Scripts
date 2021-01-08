@@ -48,6 +48,11 @@ Use the -ss and -vframes option:
 - Placing -ss before the input will be faster. See FFmpeg Wiki: Seeking and this excerpt from the ffmpeg cli tool documentation:
 
 ```
+ffmpeg -ss hh:mm:ss -i input -vframes 1 -q:v 2 output.jpg
+```
+
+### Example
+```
 ffmpeg -ss 01:23:45 -i input -vframes 1 -q:v 2 output.jpg
 ```
 
