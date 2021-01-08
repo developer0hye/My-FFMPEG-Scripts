@@ -34,3 +34,21 @@ ffmpeg -ss hh:mm:ss -to hh:mm:ss -i video.mp4 out%05d.png
 ```
 ffmpeg -ss 00:05:30 -to 00:42:30 -i video.mp4 out%05d.png
 ```
+
+## Extract 1 screenshot for a video with ffmpeg at a given time?
+
+[link](https://stackoverflow.com/questions/27568254/how-to-extract-1-screenshot-for-a-video-with-ffmpeg-at-a-given-time)
+
+Use the -ss and -vframes option:
+
+- For JPEG output use -q:v to control output quality. Full range is a linear scale of 1-31 where a lower value results in a higher quality. 2-5 is a good range to try.
+
+- The select filter provides an alternative method for more complex needs such as selecting only certain frame types, or 1 per 100, etc.
+
+- Placing -ss before the input will be faster. See FFmpeg Wiki: Seeking and this excerpt from the ffmpeg cli tool documentation:
+
+```
+ffmpeg -ss 01:23:45 -i input -vframes 1 -q:v 2 output.jpg
+```
+
+
