@@ -57,3 +57,12 @@ ffmpeg -ss 01:23:45 -i input -vframes 1 -q:v 2 output.jpg
 ```
 
 
+## Cutting the videos based on start and end time using ffmpeg
+
+[link](https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg)
+
+### Example
+```
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+```
+
