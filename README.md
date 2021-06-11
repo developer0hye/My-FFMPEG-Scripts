@@ -65,11 +65,11 @@ ffmpeg -ss 01:23:45 -i input -vframes 1 -q:v 2 output.jpg
 
 00:00:03 ~ 00:00:11 
 ```
-ffmpeg  -ss 00:00:03 -i movie.mp4-t 00:00:08 -async 1 cut.mp4
+ffmpeg  -ss 00:00:03 -t 00:00:08 -i movie.mp4 -async 1 cut.mp4
 ```
 
 00:00:03 ~ 00:00:08 
 ```
-ffmpeg -ss 00:00:03 -i movie.mp4  -to 00:00:08 -async 1 cut.mp4
+ffmpeg -ss 00:00:03 -to 00:00:08 -i movie.mp4 -async 1 cut.mp4
 ```
 
