@@ -73,3 +73,15 @@ ffmpeg  -ss 00:00:03 -t 00:00:08 -i movie.mp4 -async 1 cut.mp4
 ffmpeg -ss 00:00:03 -to 00:00:08 -i movie.mp4 -async 1 cut.mp4
 ```
 
+## Repeat/loop Input Video with ffmpeg?
+
+[link](https://video.stackexchange.com/questions/12905/repeat-loop-input-video-with-ffmpeg)
+
+### Example
+
+```
+ffmpeg -stream_loop 3 -i input.mp4 -c copy output.mp4
+```
+
+
+
